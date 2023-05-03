@@ -11,6 +11,8 @@ done
 filesdir="sedchanges"
 for var in "$@"
 do
-    sed "s|BitcoinExchange|${var^}|g" $filesdir/BitcoinExchange.cpp > "./${var^}.cpp"
-    sed "s|BitcoinExchange|${var^}|g" $filesdir/BitcoinExchange.hpp > "./${var^}.hpp"
+    var=`echo $var | awk '{print toupper(substr($0,1,1)) substr($0,2)}'`
+	
+    sed "s|BitcoinExchange|$var|g" $filesdir/BitcoinExchange.cpp > "./$var.cpp"
+    sed "s|BitcoinExchange|$var|g" $filesdir/BitcoinExchange.hpp > "./$var.hpp"
 done
