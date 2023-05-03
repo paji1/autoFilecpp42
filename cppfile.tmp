@@ -1,0 +1,16 @@
+#!/bin/bash
+
+for var in "$@"
+do
+	if [[ ${var: -4} == ".cpp" ]] || [[ ${var: -4} == ".hpp" ]]; then
+		echo enter name without .cpp or .hpp
+		exit 1
+	fi
+done
+
+filesdir="sedchanges"
+for var in "$@"
+do
+    sed "s|BitcoinExchange|${var^}|g" $filesdir/BitcoinExchange.cpp > "./${var^}.cpp"
+    sed "s|BitcoinExchange|${var^}|g" $filesdir/BitcoinExchange.hpp > "./${var^}.hpp"
+done
