@@ -1,24 +1,24 @@
 #!/bin/bash
 sed "s|sedchanges|$PWD|g" "$PWD/cppfile.tmp" > bin/cppfile
 
-which bash > /dev/null 2>&1
-if [ $? -eq 0 ]
-then
-	grep autoCreateFileCpp ~/.bashrc  > /dev/null 2>&1
-	if [ $? -ne 0 ]
-	then
-		echo "export PATH=\"$PWD/autoCreateFileCpp/bin:$PATH\"" >> ~/.bashrc
-		source ~/.bashrc
-	fi
-fi
-
 which zsh > /dev/null 2>&1
 if [ $? -eq 0 ]
 then
-	grep autoCreateFileCpp ~/.zshrc  > /dev/null 2>&1
+	grep autoFilecpp42 ~/.zshrc  > /dev/null 2>&1
 	if [ $? -ne 0 ]
 	then
-		echo "export PATH=\"$PWD/autoCreateFileCpp/bin:$PATH\"" >> ~/.zshrc
-		source ~/.zshrc
+		echo "export PATH=\"$PWD/bin:$PATH\"" >> ~/.zshrc 
+		source zsh > /dev/null 2>&1
+	fi
+fi
+
+which bash > /dev/null 2>&1
+if [ $? -eq 0 ]
+then
+	grep autoFilecpp42 ~/.bashrc  > /dev/null 2>&1
+	if [ $? -ne 0 ]
+	then
+		echo "export PATH=\"$PWD/bin:$PATH\"" >> ~/.bashrc
+		source bash > /dev/null 2>&1
 	fi
 fi

@@ -8,7 +8,7 @@ do
 	fi
 done
 
-filesdir="/home/taha/tools/autoCreateFileCpp"
+filesdir="/Users/tel-mouh/Desktop/autoFilecpp42"
 for var in "$@"
 do
     sed "s|BitcoinExchange|${var^}|g" $filesdir/BitcoinExchange.cpp > "./${var^}.cpp"
