@@ -1,5 +1,5 @@
-#ifndef SPAN_HPP
-# define SPAN_HPP
+#ifndef Bitcoin_Exchange
+# define Bitcoin_Exchange
 
 # include <iostream>
 # include <string>
