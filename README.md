@@ -4,11 +4,15 @@
 
 1. Clone the repository to your local machine using the following command:
 
-   `git clone git@github.com:paji1/autoFilecpp42.git`
+   ```sh
+   git clone git@github.com:paji1/autoFilecpp42.git
+   ```
 
 2. Navigate to the directory and run the `installer` script using the following command:
 
-   `./installer`
+   ```sh
+   ./installer
+   ```
 
    This will install the necessary dependencies and make the `cppfile` script executable.
 
@@ -16,4 +20,4 @@
 
    `./cppfile filename1 ...`
 
-The script will create the necessary CPP and HPP files with orthodoxy calculations in the same directory as the script.
+*The script will create the necessary CPP and HPP files with orthodoxy calculations in the same directory as the script.*
