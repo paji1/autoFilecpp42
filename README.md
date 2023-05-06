@@ -14,6 +14,6 @@
 
 ### 3. To use the `cppfile` script, provide it with the filenames you want to create as arguments. For example, to create `filename1.cpp` and `filename1.hpp`, run the following command:
 
-   ./cppfile filename1
+   `./cppfile filename1 ...`
 
 The script will create the necessary CPP and HPP files with orthodoxy calculations in the same directory as the script.
