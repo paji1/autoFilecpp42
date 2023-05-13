@@ -16,5 +16,5 @@ do
 	
     sed "s|BitcoinExchange|$var|g" $filesdir/BitcoinExchange.cpp > "./$var.cpp"
     sed "s|BitcoinExchange|$var|g" $filesdir/BitcoinExchange.hpp > "./$var.hpp"
-    sed -i "s|Bitcoin_Exchange|$var2|g" ./$var.hpp
+    sed -i "" "s|Bitcoin_Exchange|$var2|g" ./$var.hpp
 done
